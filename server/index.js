@@ -7,16 +7,11 @@ const router = require("./routes/router");
 const app = express();
 const server = http.createServer(app);
 const io = socketIo(server);
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3002;
+
+const rootSocket = require("./sockets/root.socket");
 
 app.use(router);
-
-io.on("connection", (socket) => {
-  console.log("User Connected ...");
-  socket.on("disconnect", () => console.log("User disconnect ..."));
-  socket.on("join", ({ getNickname }) => {
-    console.log(getNickname);
-  });
-});
+rootSocket(io);
 
 server.listen(PORT, () => console.log(`Server started on port ${PORT}`));

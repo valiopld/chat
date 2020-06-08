@@ -1,0 +1,24 @@
+.side {
+  border: 1px solid black;
+  width: 20%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  .user-info {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-bottom: 2px solid black;
+  }
+  .users-list {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    p {
+      margin: 0.1rem;
+    }
+  }
+}

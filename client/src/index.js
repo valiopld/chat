@@ -1,7 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import AppWrapper from "./AppWrapper";
+
 import "./index.css";
-import App from "./components/App";
+
 const root = document.querySelector("#root");
 
-ReactDOM.render(<App />, root);
+ReactDOM.render(<AppWrapper />, root);
