@@ -1,0 +1,28 @@
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  .login-title {
+  }
+  .login-paper {
+    display: flex;
+    flex-direction: column;
+    width: 35rem;
+    height: 20rem;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 2rem;
+    .username-input {
+      width: 15rem;
+    }
+    .login-error {
+      height: 2rem;
+      color: rgb(255, 30, 30);
+    }
+    .login-button {
+      width: 5rem;
+    }
+  }
+}

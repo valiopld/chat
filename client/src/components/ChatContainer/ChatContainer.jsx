@@ -8,8 +8,8 @@ import socketContext from "../../state/socket/socket.context";
 import Side from "../side/side.jsx";
 import Main from "../main/main.jsx";
 
-import "./chat.scss";
-const Chat = () => {
+import "./ChatContainer.scss";
+const ChatContainer = () => {
   const { userState } = useContext(userContext);
   const { setSocket } = useContext(socketContext);
 
@@ -26,7 +26,7 @@ const Chat = () => {
   }, [isLoggedIn, setSocket, username]);
 
   return isLoggedIn ? (
-    <div className="chat">
+    <div className="chat-container">
       <Side />
       <Main />
     </div>
@@ -35,4 +35,4 @@ const Chat = () => {
   );
 };
 
-export default Chat;
+export default ChatContainer;

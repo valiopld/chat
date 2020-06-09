@@ -1,17 +1,21 @@
 import React from "react";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 
-import Login from "./login/login";
-import Chat from "./chat/chat";
+import LoginContainer from "./LoginContainer/LoginContainer";
+import ChatContainer from "./ChatContainer/ChatContainer";
 
-import "./app.scss";
+import "./App.scss";
 
 const App = () => {
+  const isLoggedIn = false;
   return (
     <div className="app">
       <Switch>
-        <Route path="/chat" component={Chat} />
-        <Route path="/login" component={Login} />
+        <Route path="/chat" component={ChatContainer} />
+        <Route path="/login" component={LoginContainer} />
+        <Route exact path="/">
+          <Redirect to={isLoggedIn ? "/chat" : "/login"} />
+        </Route>
       </Switch>
     </div>
   );

@@ -1,6 +1,7 @@
 const users = [];
 
 const messages = [];
+
 class Message {
   constructor(author, message) {
     this.author = author;
@@ -8,6 +9,7 @@ class Message {
     this.date = new Date();
   }
 }
+
 module.exports = (io) => {
   io.on("connection", (socket) => {
     const currentUser = {
